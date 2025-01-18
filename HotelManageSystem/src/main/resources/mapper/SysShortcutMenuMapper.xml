@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.SysShortcutMenuMapper">
+
+    <resultMap id="BaseResultMap" type="domain.SysShortcutMenu">
+            <id property="shortcutMenuId" column="shortcut_menu_id" jdbcType="VARCHAR"/>
+            <result property="shortcutMenuName" column="shortcut_menu_name" jdbcType="VARCHAR"/>
+            <result property="shortcutMenuPath" column="shortcut_menu_path" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="shortcutMenuParentId" column="shortcut_menu_parent_id" jdbcType="VARCHAR"/>
+            <result property="sortWeight" column="sort_weight" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        shortcut_menu_id,shortcut_menu_name,shortcut_menu_path,
+        user_id,shortcut_menu_parent_id,sort_weight,
+        create_time,update_time
+    </sql>
+</mapper>

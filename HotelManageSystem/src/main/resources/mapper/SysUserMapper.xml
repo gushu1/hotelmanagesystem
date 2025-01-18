@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.SysUserMapper">
+
+    <resultMap id="BaseResultMap" type="domain.SysUser">
+            <id property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="loginName" column="login_name" jdbcType="VARCHAR"/>
+            <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="valid" column="valid" jdbcType="CHAR"/>
+            <result property="limitedIp" column="limited_ip" jdbcType="VARCHAR"/>
+            <result property="expiredTime" column="expired_time" jdbcType="TIMESTAMP"/>
+            <result property="lastChangePwdTime" column="last_change_pwd_time" jdbcType="TIMESTAMP"/>
+            <result property="lastLoginTime" column="last_login_time" jdbcType="TIMESTAMP"/>
+            <result property="limitMultiLogin" column="limit_multi_login" jdbcType="CHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,login_name,user_name,
+        password,valid,limited_ip,
+        expired_time,last_change_pwd_time,last_login_time,
+        limit_multi_login,create_time,update_time
+    </sql>
+</mapper>

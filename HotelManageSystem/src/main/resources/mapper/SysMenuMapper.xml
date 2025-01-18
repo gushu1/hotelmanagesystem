@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.SysMenuMapper">
+
+    <resultMap id="BaseResultMap" type="domain.SysMenu">
+            <id property="menuId" column="menu_id" jdbcType="VARCHAR"/>
+            <result property="menuName" column="menu_name" jdbcType="VARCHAR"/>
+            <result property="menuPath" column="menu_path" jdbcType="VARCHAR"/>
+            <result property="menuParentId" column="menu_parent_id" jdbcType="VARCHAR"/>
+            <result property="sortWeight" column="sort_weight" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        menu_id,menu_name,menu_path,
+        menu_parent_id,sort_weight,create_time,
+        update_time
+    </sql>
+</mapper>
